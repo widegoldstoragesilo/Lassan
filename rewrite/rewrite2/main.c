@@ -49,8 +49,12 @@ int main(void)
     
     //leangue
     int langue = 0;
-    //scale
-    float scale = screenWidth * 0.002;
+    //scale up
+    float scale = screenWidth * 0.003;
+
+    UpMenuButtons(screenWidth, screenHeight, scale);
+    UpLangueButtons(screenWidth, screenHeight, scale);
+    UpSTButtons(screenWidth, screenHeight, scale);
     // timer
     static float timer;
     static bool drawLogo = false;

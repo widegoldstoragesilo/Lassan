@@ -125,17 +125,7 @@ void UpdateMENUScreen(GameScreen *currentScreen, int *langue, int screenWidth, i
             }
     }
 }
-/*
-void DrawMENUScreen(int langue)
-{
-    for (int i = 0; i < MENU_BUTTON_COUNT; i++)
-    {
-        DrawTexturePro(menuButtons[i].icon, (int)menuButtons[i].rect.x, (int)menuButtons[i].rect.y, WHITE);
-    }
-    
-    DrawTexture(langueButtons[langue].icon, (int)langueButtons[langue].rect.x, (int)langueButtons[langue].rect.y, WHITE);
-}
-*/
+
 void DrawMENUScreen(int langue, bool drawMButtons)
 {
     if (drawMButtons)
