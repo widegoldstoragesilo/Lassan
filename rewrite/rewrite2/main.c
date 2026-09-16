@@ -66,13 +66,6 @@ int main(void)
         float dt = GetFrameTime();
         timer += dt;
 
-        if (IsWindowResized())
-        {
-            UpMenuButtons(screenWidth, screenHeight, scale);
-            UpLangueButtons(screenWidth, screenHeight, scale);
-            UpSTButtons(screenWidth, screenHeight, scale);
-        }
-
         if (timer > 1) drawLogo = true;
         if (timer > 5) drawMButtons = true;
 
@@ -89,8 +82,11 @@ int main(void)
 
             if (scaleW < scaleH) scale = scaleW;
             else if (scaleH < scaleW) scale = scaleH;
-        }
 
+            UpMenuButtons(screenWidth, screenHeight, scale);
+            UpLangueButtons(screenWidth, screenHeight, scale);
+            UpSTButtons(screenWidth, screenHeight, scale);
+        }
 
         switch (currentScreen)
         {
