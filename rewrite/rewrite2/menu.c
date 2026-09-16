@@ -40,7 +40,7 @@ void UpMenuButtons(int screenWidth, int screenHeight, float scale)
 
 Button langueButtons[2];
 
-void LoadlangueButton(int load, int screenWidth, int screenHeight, struct langueButtons *buttons)
+void LoadlangueButton(int load, int screenWidth, int screenHeight)
 {
     if (load == 0)
     {

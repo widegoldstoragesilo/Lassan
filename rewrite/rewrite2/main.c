@@ -2,9 +2,9 @@
 #include <math.h>
 #include "logo.h"
 #include "menu.h"
-#include "ls.h"
+//#include "ls.h"
 #include "asd.h"
-//#include "st.h"
+#include "st.h"
 //#include "game.h"
 
 #define ARRAY_LENGTH(arr) (sizeof(arr) / sizeof((arr)[0]))
@@ -22,7 +22,7 @@ int main(void)
     LoadMenuButtons(load, screenWidth, screenHeight);
     LoadlangueButton(load, screenWidth, screenHeight);
     LoadLogoTexture(load, screenWidth);
-    LoadstButtons(load, screenWidth, screenHeight);
+    LoadSTButtons(load, screenWidth, screenHeight);
     // player
     /*float size = 20;
     float moveSpeed = 400.0f;
@@ -91,7 +91,7 @@ int main(void)
         switch (currentScreen)
         {
             case MENU:     UpdateMENUScreen(&currentScreen, &langue, screenWidth, screenHeight, scale, drawMButtons); break;
-            case LS: UpdateLSScreen(&currentScreen, &langue, screenWidth, screenHeight, scale); break;
+            case LS: /*UpdateLSScreen(&currentScreen, &langue, screenWidth, screenHeight, scale);*/ break;
             case ST:  UpdateSTScreen(&currentScreen, &langue, screenWidth, screenHeight, scale); break;
             //case GAME:  UpdateGameScreen(); break;
         }
@@ -107,7 +107,7 @@ int main(void)
         switch (currentScreen)
         {
             case MENU:     DrawMENUScreen(langue, drawMButtons); break;
-            case LS: /*DrawLSScreen(langue)*/; break;
+            case LS: /*DrawLSScreen(langue);*/ break;
             case ST:  DrawSTScreen(); break;
             //case GAME:  DrawGameScreen(); break;
         }
@@ -134,7 +134,7 @@ int main(void)
     LoadMenuButtons(load, screenWidth, screenHeight);
     LoadlangueButton(load, screenWidth, screenHeight);
     LoadLogoTexture(load, screenWidth);
-    LoadstButtons(load, screenWidth, screenHeight);
+    LoadSTButtons(load, screenWidth, screenHeight);
 
     CloseWindow();
     return 0;

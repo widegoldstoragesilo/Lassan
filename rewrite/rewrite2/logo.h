@@ -1,6 +1,7 @@
 #ifndef LOGO_H
 #define LOGO_H
 
+#include "asd.h"
 #include "raylib.h"
 
 void LoadLogoTexture(int load, int screenWidth);

@@ -1,6 +1,8 @@
 #ifndef ST_H
 #define ST_H
 
+#include "asd.h"
+
 void UpdateSTScreen(GameScreen *currentScreen, int *langue, int screenWidth, int screenHeight, float scale);
 void DrawSTScreen();
 
